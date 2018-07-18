@@ -7,7 +7,11 @@ class App extends Component {
     const name = 'react';
     return (
       <div>
-        hello {name}!
+        {
+          1 + 1 === 3
+            ? (<div>맞아요!</div>)
+            : (<div>틀려요!</div>)
+        }
       </div>
     );
   }
