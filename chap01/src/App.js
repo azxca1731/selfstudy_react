@@ -4,14 +4,27 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const name = 'react';
+    const style = {
+      backgroundColor: 'black',
+      padding: '16px',
+      color: 'white',
+      fontSize: '12px'
+    };
+    const value = 1;
     return (
       <div>
-        {
-          1 + 1 === 3
-            ? (<div>맞아요!</div>)
-            : (<div>틀려요!</div>)
-        }
+        <div style={style}>
+          hi there
+        </div>
+        <div>
+          {
+            (() => {
+              if (value === 1) return (<div>하나</div>);
+              if (value === 2) return (<div>둘</div>);
+              if (value === 3) return (<div>셋</div>);
+            })()
+          }
+        </div>
       </div>
     );
   }
