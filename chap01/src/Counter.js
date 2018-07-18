@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
+
     constructor(props) {
         super(props);
         this.handleIncrease = this.handleIncrease.bind(this);
         this.handleDecrease = this.handleDecrease.bind(this);
         this.state = {
             number: 0
-        }
+        };
     }
+
     handleIncrease = () => {
         this.setState(
-            (state) => ({
-                number: state.number
+            ({ number }) => ({
+                number: number + 1
             })
         );
     }
 
     handleDecrease = () => {
+        const { number } = this.state;
         this.setState({
-            number: this.state.number - 1
+            number: number + 1
         });
     }
 
