@@ -9,5 +9,8 @@ class MyName extends Component {
         )
     }
 }
+MyName.defaultProps = {
+    name: '기본이름'
+};
 
 export default MyName;
