@@ -7,6 +7,7 @@ class TodoItem extends Component {
 
         return (
             <div className="todo-item" onClick={() => onToggle(id)}>
+                {console.log("TodoItemList render")}
                 <div className="remove" onClick={(e) => {
                     e.stopPropagation(); // onToggle 이 실행되지 않도록 함
                     onRemove(id)
