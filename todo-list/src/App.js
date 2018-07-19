@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoListTemplate from './components/TodoListTemplate'
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList'
+import Palette from './components/Palette';
 
 class App extends Component {
   id = 3 // 이미 0,1,2 가 존재하므로 3으로 설정
@@ -84,9 +85,11 @@ class App extends Component {
         onKeyPress={handleKeyPress}
         onChange={handleChange}
         onCreate={handleCreate}
-      />}>
+      />}
+        palette={<Palette />}
+      >
         <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
-      </TodoListTemplate>
+      </TodoListTemplate >
     );
   }
 }
