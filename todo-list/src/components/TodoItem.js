@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './TodoItem.css';
 
 class TodoItem extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        //이럴때 virtualdom 안하게 함
+        return this.props.checked !== nextProps.checked;
+    }
+
     render() {
         const { text, checked, id, onToggle, onRemove } = this.props;
 

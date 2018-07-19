@@ -3,7 +3,10 @@ import TodoItem from './TodoItem'
 
 class TodoItemList extends Component {
 
-
+    shouldComponentUpdate(nextProps, nextState) {
+        //이럴때 virtualdom 안하게 함
+        return this.props.todos !== nextProps.todos;
+    }
 
     render() {
         const { todos, onToggle, onRemove } = this.props;
