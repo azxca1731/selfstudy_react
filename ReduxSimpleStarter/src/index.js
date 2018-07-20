@@ -1,15 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import ReactDom from 'react-dom';
+import SearchBar from './components/search_bar';
 
-import App from './components/app';
-import reducers from './reducers';
+const API_KEY = "AIzaSyBHRSm5RRZEkjzwEcJA_JZhoYYZX5nNyzI";
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+//새 컴포넌트 생성 컴포넌트는 html생성
+const App = () => {
+    return (
+        <div>
+            <SearchBar />
+        </div>
+    )
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+}
+//컴포넌트 삽입 및 페이지 반영 
+ReactDom.render(<App />, document.querySelector('.container'));
