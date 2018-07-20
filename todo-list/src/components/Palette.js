@@ -1,28 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Palette.css';
 
-class Color extends Component {
-    render() {
-        const { color } = this.props;
-        return (
-            <div className="color" style={{ background: color }}>
-            </div >
-        )
-    }
+const Color = ({ color, active, onClick }) => {
+    return (
+        <div
+            className={`color ${active && 'active'}`}
+            style={{ background: color }}
+            onClick={onClick}
+        />
+    )
 
 }
-class Palette extends Component {
 
-    render() {
-        return (
-            <div className="palette">
-                <Color color='#343a40' />
-                <Color color='#f03e3e' />
-                <Color color='#12b886' />
-                <Color color='#228ae6' />
-            </div>
-        )
+const Palette = ({ colors, selected, onSelect }) => {
+    const colorList = colors.map(
+        (color) => (
+            <Color
+                color={color}
+                onClick={() => onSelect(color)}
+                active={color === selected}
+                key={color}
+            />)
+    );
 
-    }
-}
-export default Palette
+    return (
+        <div className="palette">
+            {colorList}
+        </div>
+    )
+};
+export default Palette;
