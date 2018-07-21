@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import SearchBar from './components/search_bar';
+import API_KEY from './api';
 
-const API_KEY = "AIzaSyBHRSm5RRZEkjzwEcJA_JZhoYYZX5nNyzI";
 
 //새 컴포넌트 생성 컴포넌트는 html생성
 const App = () => {
