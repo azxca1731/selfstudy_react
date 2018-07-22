@@ -1,0 +1,1 @@
+보일러 플레이트로 firebase + redux + react-redux + redux-promis + immutable + react-router-dom 이 쓰임

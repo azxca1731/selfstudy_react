@@ -9,6 +9,9 @@
 # production
 /build
 
+# config (=secret key)
+/src/config
+
 # misc
 .DS_Store
 .env.local
