@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './components/Menu';
 import { Route } from 'react-router-dom';
-import { Home, Queue } from './pages/index';
+import { Home, Queue, About } from './pages/index';
 
 class App extends Component {
 
@@ -11,6 +11,7 @@ class App extends Component {
         <Menu />
         <Route exact path="/" component={Home} />
         <Route path="/queue" component={Queue} />
+        <Route path="/About" component={About} />
       </div>
     );
   }

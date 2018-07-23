@@ -1,9 +1,10 @@
 import React from 'react'
+import Form from '../components/Form';
 
 const Queue = () => {
     return (
-        <div>
-            <h2> Queue </h2>
+        <div className="container">
+            <Form />
         </div>
     )
 }
