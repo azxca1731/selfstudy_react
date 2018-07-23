@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 class App extends Component {
 
   constructor() {
     super()
     this.state = {
-      speed: 10
+      speed: 20
     }
   }
 
@@ -25,6 +26,7 @@ class App extends Component {
       <div>
         <p> Hello Firebase!</p>
         <p> {speed} </p>
+        <p> made by junghun </p>
       </div>
     );
   }

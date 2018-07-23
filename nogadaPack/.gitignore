@@ -12,6 +12,9 @@
 # config (=secret key)
 /src/config
 
+# firebase 
+/firebase.rules.json
+
 # misc
 .DS_Store
 .env.local

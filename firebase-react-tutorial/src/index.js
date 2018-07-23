@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database'
 
 
 
