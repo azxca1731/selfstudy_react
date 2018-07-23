@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
-import * as firebase from 'firebase';
-import config from './config/firebase';
+import firebase from 'firebase';
+
+
 
 import './styles/index.css';
+import { config } from './config/firebase'
 import Root from './Root';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
