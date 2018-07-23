@@ -1,0 +1,12 @@
+a {
+    color: rgb(252, 252, 252); 
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+}
+
+.componentsMenu1 {
+    font: 20px "Lucida Grande", Helvetica, Arial, sans-serif; 
+}

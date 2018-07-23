@@ -1,32 +1,16 @@
 import React, { Component } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/database';
+import Menu from './components/Menu';
+import { Route } from 'react-router-dom';
+import { Home, Queue } from './pages/index';
+
 class App extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      speed: 20
-    }
-  }
-
-  componentDidMount() {
-    const rootRef = firebase.database().ref();
-    const speedRef = rootRef.child('speed');
-    speedRef.on('value', snap => {
-      this.setState({
-        speed: snap.val()
-      })
-    })
-  }
-
   render() {
-    const { speed } = this.state;
     return (
       <div>
-        <p> Hello Firebase!</p>
-        <p> {speed} </p>
-        <p> made by junghun </p>
+        <Menu />
+        <Route exact path="/" component={Home} />
+        <Route path="/queue" component={Queue} />
       </div>
     );
   }
