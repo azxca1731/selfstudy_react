@@ -2,16 +2,16 @@ import React from 'react';
 const PostPrev = ({ postTitle, postSubtitle, writer }) => {
     return (
         <div>
-            <div class="post-preview">
+            <div className="post-preview">
                 <a href="post.html">
-                    <h2 class="post-title">
+                    <h2 className="post-title">
                         {postTitle}
                     </h2>
-                    <h3 class="post-subtitle">
+                    <h3 className="post-subtitle">
                         {postSubtitle}
                     </h3>
                 </a>
-                <p class="post-meta">Posted by
+                <p className="post-meta">Posted by
                     <a href="/"> {writer} </a>
                     on September 24, 2018</p>
             </div>
