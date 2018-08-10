@@ -3,6 +3,48 @@ import { connect } from 'react-redux';
 import Chart from '../components/Chart';
 
 
+
+
+
+
+
+
+
+
+
+this.defaultProps = {
+    url: 'http://img.cgv.co.kr/Movie/Thumbnail/Poster/000080/80600/80600_185.jpg',
+    date_created: '9999.99.99',
+    title: 'not-loading',
+    desc: 'not-loading'
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class WeatherList extends Component {
     renderWeather(cityData) {
         const { name } = cityData.city;
