@@ -1,10 +1,8 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
 import NavigationBar from './template/NavigationBar';
 import Footer from './template/Footer';
-import About from './pages/About';
-import Whoops404 from './pages/Whoops404'
+import { Home, About, Whoops404, Posts } from './pages/index'
 const App = () =>
     <HashRouter>
         <div>
@@ -12,7 +10,7 @@ const App = () =>
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
-                <Route path="/posts" component={Home} />
+                <Route path="/posts" component={Posts} />
                 <Route path="/concat" component={Home} />
                 <Route component={Whoops404} />
             </Switch>
