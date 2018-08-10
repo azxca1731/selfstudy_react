@@ -1,5 +1,5 @@
 import React from 'react';
-const PostPrev = ({ postTitle, postSubtitle }) => {
+const PostPrev = ({ postTitle, postSubtitle, writer }) => {
     return (
         <div>
             <div class="post-preview">
@@ -12,7 +12,7 @@ const PostPrev = ({ postTitle, postSubtitle }) => {
                     </h3>
                 </a>
                 <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
+                    <a href="/"> {writer} </a>
                     on September 24, 2018</p>
             </div>
             <hr />

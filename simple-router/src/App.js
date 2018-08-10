@@ -1,9 +1,10 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import { About, Concat, Events, Products, Whoops404 } from './pages';
+import { Concat, Events, Products, Whoops404 } from './pages';
 import Home from './pages/Home';
 import NavigationBar from './template/NavigationBar';
 import Footer from './template/Footer';
+import About from './pages/About';
 const App = () =>
     <HashRouter>
         <div className="name">
