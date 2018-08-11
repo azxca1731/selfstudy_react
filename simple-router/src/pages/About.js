@@ -1,9 +1,10 @@
 import React from 'react'
 import PageHeader from '../component/PageHeader';
+import { firebaseStorage } from '../config';
 const About = () => {
     return (
         <div>
-            <PageHeader title="ABout Me" subtittle="노가다 짓이라 말하면서 계속 코딩만 하는 변태" Background="https://cdn.pixabay.com/photo/2015/09/05/23/28/coding-926242_1280.jpg" />
+            <PageHeader title="ABout Me" subtittle="노가다 짓이라 말하면서 계속 코딩만 하는 변태" Background={firebaseStorage.Url + "About.jpg?alt=media&token=" + firebaseStorage.Token} />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-10 mx-auto">

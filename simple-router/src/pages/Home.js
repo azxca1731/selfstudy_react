@@ -1,11 +1,12 @@
 import React from 'react';
 import PageHeader from '../component/PageHeader';
 import PostPrev from '../component/PostPrev';
+import { firebaseStorage } from '../config';
 //6개정도만 보여줄것
 const Home = () => {
     return (
         <div>
-            <PageHeader title="너도 할 수 있다" subtittle="리액트 노예 계속해서 리액트만한다." Background="https://cdn.pixabay.com/photo/2017/03/07/13/02/thought-2123971_1280.jpg" />
+            <PageHeader title="너도 할 수 있다" subtittle="리액트 노예 계속해서 리액트만한다." Background={firebaseStorage.Url + "Home.jpg?alt=media&token=" + firebaseStorage.Token} />
             <div className="container">
                 <div className="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
