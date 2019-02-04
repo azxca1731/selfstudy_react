@@ -7,5 +7,8 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 it("renders without crashing", () => {
   const wrapper = shallow(<App />);
-  console.log(wrapper.debug());
+  expect(wrapper).toBeTruthy();
+  //결과 값이 트루일때
+  //expect(wrapper).toBeFalsy();
+  //결과 값이 false일때 ex)null,false,"",[]
 });
