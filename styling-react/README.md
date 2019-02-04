@@ -1,1 +1,0 @@
-1. eject 후에 npm install을 해야함 ㅠㅠ
