@@ -45,6 +45,10 @@ test("render counter display", () => {
   expect(counterDisplay.length).toBe(1);
 });
 
-test("should counter start at 0", () => {});
+test("should counter start at 0", () => {
+  const wrapper = setup();
+  const initailCounterState = wrapper.state("counter");
+  expect(initailCounterState).toBe(0);
+});
 
 test("increase counter when you push the button", () => {});
