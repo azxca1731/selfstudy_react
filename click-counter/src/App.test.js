@@ -12,9 +12,17 @@ test("render without error", () => {
   expect(Appcontent.length).toBe(1);
 });
 
-test("render counter button", () => {});
+test("render increase button", () => {
+  const wrapper = shallow(<App />);
+  const increaseButton = wrapper.find("[data-test='increase-button']");
+  expect(increaseButton.length).toBe(1);
+});
 
-test("render counter display", () => {});
+test("render counter display", () => {
+  const wrapper = shallow(<App />);
+  const counterDisplay = wrapper.find("[data-test='counter-display']");
+  expect(counterDisplay.length).toBe(1);
+});
 
 test("should counter start at 0", () => {});
 
