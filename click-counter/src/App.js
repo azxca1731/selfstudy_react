@@ -24,6 +24,7 @@ class App extends Component {
         <button data-test="increase-button" onClick={this.handleCounterClicked}>
           increase here!
         </button>
+        <button data-test="decrease-button">decrease here!</button>
       </div>
     );
   }
