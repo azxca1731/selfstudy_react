@@ -53,6 +53,23 @@ test("render counter display", () => {
   expect(counterDisplay.length).toBe(1);
 });
 
+test("redner error with normal state", () => {
+  const wrapper = setup();
+  const errorDisplay = findByTestAttr(wrapper, "error-display");
+  expect(errorDisplay.length).toBe(0);
+});
+
+test("redner error with unnormal state", () => {
+  const wrapper = setup();
+  const errorDisplay = findByTestAttr(wrapper, "error-display");
+
+  //find the decrease button and click it
+  const decreaseButton = findByTestAttr(wrapper, "decrease-button");
+  decreaseButton.simulate("click");
+
+  expect(errorDisplay.length).toBe(1);
+});
+
 test("should counter start at 0", () => {
   const wrapper = setup();
   const initailCounterState = wrapper.state("counter");
@@ -80,7 +97,7 @@ test("decrease counter when you click the button ", () => {
   const decreaseButton = findByTestAttr(wrapper, "decrease-button");
   decreaseButton.simulate("click");
 
-  //find the displayer and expect the value
+  //find the counter display and expect the value
   const counterDisplay = findByTestAttr(wrapper, "counter-display");
   expect(counterDisplay.text()).toContain(counter - 1);
 });
@@ -92,7 +109,7 @@ test("counter can't be 0", () => {
   const decreaseButton = findByTestAttr(wrapper, "decrease-button");
   decreaseButton.simulate("click");
 
-  //find the displayer and expect the value
+  //find the counter display and expect the value
   const counterDisplay = findByTestAttr(wrapper, "counter-display");
   expect(counterDisplay.text()).toContain(0);
 });
