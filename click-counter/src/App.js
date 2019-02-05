@@ -9,9 +9,15 @@ class App extends Component {
     };
   }
 
-  handleCounterClicked = () => {
+  handleIncreaseButtonClicked = () => {
     this.setState({
       counter: this.state.counter + 1
+    });
+  };
+
+  handleDecreaseButtonClicked = () => {
+    this.setState({
+      counter: this.state.counter - 1
     });
   };
 
@@ -21,10 +27,18 @@ class App extends Component {
         <h1 data-test="counter-display">
           The counter is currently {this.state.counter}
         </h1>
-        <button data-test="increase-button" onClick={this.handleCounterClicked}>
+        <button
+          data-test="increase-button"
+          onClick={this.handleIncreaseButtonClicked}
+        >
           increase here!
         </button>
-        <button data-test="decrease-button">decrease here!</button>
+        <button
+          data-test="decrease-button"
+          onClick={this.handleDecreaseButtonClicked}
+        >
+          decrease here!
+        </button>
       </div>
     );
   }
