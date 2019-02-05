@@ -41,6 +41,12 @@ test("render increase button", () => {
   expect(increaseButton.length).toBe(1);
 });
 
+test("render decrease button", () => {
+  const wrapper = setup();
+  const decreaseButton = findByTestAttr(wrapper, "decrease-button");
+  expect(decreaseButton.length).toBe(1);
+});
+
 test("render counter display", () => {
   const wrapper = setup();
   const counterDisplay = findByTestAttr(wrapper, "counter-display");
