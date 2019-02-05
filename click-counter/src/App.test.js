@@ -61,11 +61,12 @@ test("redner error with normal state", () => {
 
 test("redner error with unnormal state", () => {
   const wrapper = setup();
-  const errorDisplay = findByTestAttr(wrapper, "error-display");
 
   //find the decrease button and click it
   const decreaseButton = findByTestAttr(wrapper, "decrease-button");
   decreaseButton.simulate("click");
+
+  const errorDisplay = findByTestAttr(wrapper, "error-display");
 
   expect(errorDisplay.length).toBe(1);
 });
