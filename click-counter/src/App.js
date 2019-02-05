@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class App extends Component {
   render() {
-    return <div />;
+    return <div data-test="component-app" />;
   }
 }
 
