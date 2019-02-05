@@ -1,9 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import Enzyme from "enzyme";
+import EnzymeAdapter from "enzyme-adapter-react-16";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+import App from "./App";
+
+Enzyme.configure({ adapter: new EnzymeAdapter() });
+
+test("render without error", () => {});
+
+test("render counter button", () => {});
+
+test("render counter display", () => {});
+
+test("should counter start at 0", () => {});
+
+test("increase counter when you push the button", () => {});
